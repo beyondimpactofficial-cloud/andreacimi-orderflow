@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Institutional Order Flow Bible · Andrea Cimi Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+  <!-- TOP HEADER -->
+  <header class="app-header">
+    <div class="header-left">
+      <div class="brand-badge">INSTITUTIONAL INTEL</div>
+      <div class="brand-title">
+        ORDER FLOW <span>BIBLE</span>
+      </div>
+      <span class="version-tag">Localhost Edition · Andrea Cimi</span>
+    </div>
+
+    <!-- MAIN NAV TABS -->
+    <nav class="main-nav">
+      <button class="nav-btn active" data-tab="reader">📖 Ensiklopedia</button>
+      <button class="nav-btn" data-tab="cases">🎯 10 Kasus Riil</button>
+      <button class="nav-btn" data-tab="rules">⚡ 50 Aturan Shorts</button>
+      <button class="nav-btn" data-tab="simulator">🔬 DOM Simulator</button>
+      <button class="nav-btn" data-tab="videos">🎬 285 Video Vault</button>
+      <button class="nav-btn" data-tab="glossary">📚 100 Glosarium</button>
+      <button class="nav-btn" data-tab="quiz">🏆 Ujian Prop Firm</button>
+    </nav>
+
+    <div class="header-right">
+      <a href="/THE_INSTITUTIONAL_ORDER_FLOW_BIBLE.pdf" download class="tool-btn" style="text-decoration:none; color:#fbbf24; border-color:rgba(234,179,8,0.4); display:flex; align-items:center; gap:4px; font-size:11px; padding:6px 10px;" title="Unduh Ebook PDF Andrea Cimi">
+        📥 Unduh PDF
+      </a>
+      <div class="search-box">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="global-search" placeholder="Cari konsep lelang, CVD, GEX...">
+      </div>
+      <button id="theme-toggle" title="Toggle Mode">🌙</button>
+    </div>
+  </header>
+
+  <!-- READING PROGRESS BAR -->
+  <div class="progress-container">
+    <div class="progress-bar" id="reading-progress"></div>
+  </div>
+
+  <!-- APP CONTAINER -->
+  <div class="app-container">
+    <!-- SIDEBAR -->
+    <aside class="app-sidebar" id="app-sidebar">
+      <div class="sidebar-header">
+        <span>DAFTAR BAB LELANG</span>
+        <button id="collapse-sidebar" title="Ciutkan Sidebar">◀</button>
+      </div>
+      <div class="chapter-list" id="chapter-list">
+        <!-- Rendered by app.js -->
+      </div>
+      <div class="sidebar-footer">
+        <div class="stats-card">
+          <div class="stat-row"><span>Total Materi:</span> <strong>285 Video</strong></div>
+          <div class="stat-row"><span>Bab Ensiklopedia:</span> <strong>20 Modul</strong></div>
+          <div class="stat-row"><span>Status Pembaca:</span> <span class="badge-active">Online Localhost</span></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN VIEWPORT -->
+    <main class="app-main" id="app-main">
+      <!-- TAB: READER -->
+      <section class="tab-view active" id="view-reader">
+        <div class="reader-toolbar">
+          <div class="toolbar-left">
+            <span id="current-chapter-num" class="badge-gold">Bab 00</span>
+            <span id="reading-time" class="reading-time">⏱️ ~15 mnt baca</span>
+          </div>
+          <div class="toolbar-right">
+            <button class="tool-btn" id="btn-font-smaller">A-</button>
+            <button class="tool-btn" id="btn-font-larger">A+</button>
+            <button class="tool-btn" id="btn-copy-chapter">📋 Salin Bab</button>
+            <button class="tool-btn" id="btn-bookmark">🔖 Tandai Bacaan</button>
+          </div>
+        </div>
+
+        <article class="reader-content" id="reader-content">
+          <!-- Dynamic Chapter Content loaded here -->
+        </article>
+
+        <div class="chapter-pagination">
+          <button class="page-btn" id="btn-prev-chapter">← Bab Sebelumnya</button>
+          <button class="page-btn page-btn-primary" id="btn-next-chapter">Bab Selanjutnya →</button>
+        </div>
+      </section>
+
+      <!-- TAB: 10 REAL CASES -->
+      <section class="tab-view" id="view-cases">
+        <div class="section-hero">
+          <h2>🎯 BEDAH 10 STUDI KASUS TRANSAKSI NYATA ANDREA CIMI</h2>
+          <p>Rekonstruksi detik-demi-detik eksekusi live trade pada sesi reguler bursa New York (ES &amp; NQ). Analisis mikrostruktur Footprint, CVD Divergence, dan DOM MBO.</p>
+        </div>
+        <div class="cases-grid" id="cases-container">
+          <!-- Rendered by app.js -->
+        </div>
+      </section>
+
+      <!-- TAB: 50 GOLDEN RULES (SHORTS) -->
+      <section class="tab-view" id="view-rules">
+        <div class="section-hero">
+          <h2>⚡ 50 ATURAN EMAS SCALPER MIKRO</h2>
+          <p>Sintesis kurasi taktis dari 234 video Shorts Andrea Cimi: Rahasia DOM, psikologi tempur, dan manajemen risiko militer.</p>
+          <div class="rule-filter-tabs">
+            <button class="filter-btn active" data-cat="all">Semua (50)</button>
+            <button class="filter-btn" data-cat="dom">DOM &amp; Eksekusi (1-15)</button>
+            <button class="filter-btn" data-cat="risk">Manajemen Risiko (16-30)</button>
+            <button class="filter-btn" data-cat="psy">Psikologi Tempur (31-50)</button>
+          </div>
+        </div>
+        <div class="rules-list" id="rules-container">
+          <!-- Rendered by app.js -->
+        </div>
+      </section>
+
+      <!-- TAB: INTERACTIVE SIMULATOR -->
+      <section class="tab-view" id="view-simulator">
+        <div class="section-hero">
+          <h2>🔬 SIMULATOR INTERAKTIF FOOTPRINT &amp; DOM LADDER</h2>
+          <p>Uji coba mekanisme Order Flow secara langsung di browser: Simulasikan pesanan Market Buy, Iceberg Absorption, Spoofing, dan Stacked Imbalance.</p>
+        </div>
+
+        <div class="sim-grid">
+          <!-- DOM LADDER -->
+          <div class="sim-panel">
+            <div class="panel-header">
+              <span>CENTRAL LIMIT ORDER BOOK (CLOB) - ES FUTURES</span>
+              <span class="live-dot">LIVE FEED</span>
+            </div>
+            <div class="dom-table-container">
+              <table class="dom-table" id="sim-dom-table">
+                <thead>
+                  <tr>
+                    <th>BID QTY</th>
+                    <th>HARGA</th>
+                    <th>ASK QTY</th>
+                    <th>AKSI</th>
+                  </tr>
+                </thead>
+                <tbody id="sim-dom-body">
+                  <!-- Rendered dynamically -->
+                </tbody>
+              </table>
+            </div>
+            <div class="sim-controls">
+              <button class="sim-btn sim-btn-buy" id="btn-sim-buy">⚡ Market Buy 250 Lot (Sweep)</button>
+              <button class="sim-btn sim-btn-sell" id="btn-sim-sell">⚡ Market Sell 300 Lot</button>
+              <button class="sim-btn sim-btn-iceberg" id="btn-sim-iceberg">🧊 Pasang Iceberg Sell di Pucuk</button>
+              <button class="sim-btn sim-btn-reset" id="btn-sim-reset">🔄 Reset Simulator</button>
+            </div>
+          </div>
+
+          <!-- FOOTPRINT CANDLE & CVD -->
+          <div class="sim-panel">
+            <div class="panel-header">
+              <span>FOOTPRINT NUMBERS BAR &amp; CVD MONITOR</span>
+              <span id="sim-status-badge" class="badge-neutral">STATUS: LELANG NORMAL</span>
+            </div>
+            <div class="footprint-display">
+              <div class="fp-candle" id="sim-fp-candle">
+                <!-- Rendered dynamically -->
+              </div>
+              <div class="sim-analytics">
+                <div class="analytic-card">
+                  <div class="analytic-label">CUMULATIVE DELTA (CVD)</div>
+                  <div class="analytic-val" id="sim-cvd-val">+120</div>
+                </div>
+                <div class="analytic-card">
+                  <div class="analytic-label">BAR POC (POINT OF CONTROL)</div>
+                  <div class="analytic-val text-gold" id="sim-poc-val">5052.00</div>
+                </div>
+                <div class="analytic-card">
+                  <div class="analytic-label">DIAG IMBALANCE RATIO</div>
+                  <div class="analytic-val" id="sim-imbalance-val">NORMAL (1.2x)</div>
+                </div>
+              </div>
+            </div>
+            <div class="sim-log-box" id="sim-log-box">
+              <div class="log-entry">⏱️ Simulator siap. Tekan tombol simulasi di samping untuk melihat reaksi Footprint &amp; CVD.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB: 285 VIDEO VAULT -->
+      <section class="tab-view" id="view-videos">
+        <div class="section-hero">
+          <h2>🎬 285 VIDEO VAULT ANDREA CIMI DATABASE</h2>
+          <p>Katalog lengkap video YouTube @AndreaCimi terindeks per topik kurikulum. Buka video langsung di YouTube untuk mempelajari rekaman aslinya.</p>
+          <div class="video-filter-bar">
+            <input type="text" id="video-search-input" placeholder="Cari judul video atau topik...">
+            <select id="video-cat-select">
+              <option value="all">Semua Kategori</option>
+              <option value="Options Flow & GEX">Options Flow &amp; GEX</option>
+              <option value="Footprint & CVD">Footprint &amp; CVD</option>
+              <option value="Volume Profile & AMT">Volume Profile &amp; AMT</option>
+              <option value="Level 3 MBO & Bookmap">Level 3 MBO &amp; Bookmap</option>
+              <option value="Robbins Cup Champions">Robbins Cup Champions</option>
+              <option value="Prop Firm & Strategy">Prop Firm &amp; Strategy</option>
+            </select>
+          </div>
+        </div>
+        <div class="videos-grid" id="videos-container">
+          <!-- Rendered by app.js -->
+        </div>
+      </section>
+
+      <!-- TAB: 100 GLOSSARY -->
+      <section class="tab-view" id="view-glossary">
+        <div class="section-hero">
+          <h2>📚 ENSIKLOPEDIA: 100 ISTILAH WAJIB ORDER FLOW</h2>
+          <p>Kamus lengkap mikrostruktur pasar berjangka CME &amp; Teori Lelang. Cari istilah instan atau filter per kategori dan huruf abjad.</p>
+          
+          <div class="glossary-search-wrapper">
+            <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" id="glossary-search" placeholder="Ketik istilah atau definisi (contoh: Iceberg, Absorption, GEX, POC, FIFO, Delta)..." autocomplete="off" autofocus>
+            <button id="btn-clear-glossary" title="Hapus kata kunci">✕</button>
+          </div>
+
+          <div class="glossary-cat-tabs" id="glossary-cat-tabs">
+            <button class="gloss-cat-btn active" data-cat="all">Semua Kategori (100)</button>
+            <button class="gloss-cat-btn" data-cat="DOM, MBO & Mikrostruktur">DOM &amp; MBO</button>
+            <button class="gloss-cat-btn" data-cat="Auction Market Theory (AMT)">Teori Lelang AMT</button>
+            <button class="gloss-cat-btn" data-cat="Footprint & Delta">Footprint &amp; Delta</button>
+            <button class="gloss-cat-btn" data-cat="Options Flow & GEX">Options &amp; GEX</button>
+            <button class="gloss-cat-btn" data-cat="Prop Firm & Platform">Prop Firm &amp; Platform</button>
+          </div>
+
+          <div class="glossary-alphabet-bar" id="glossary-alphabet-bar">
+            <!-- Rendered by app.js -->
+          </div>
+
+          <div class="glossary-status-row">
+            <span id="glossary-count-badge" class="badge-gold">Menampilkan 100 Istilah</span>
+          </div>
+        </div>
+        <div class="glossary-grid" id="glossary-container">
+          <!-- Rendered by app.js -->
+        </div>
+      </section>
+
+      <!-- TAB: PROP FIRM QUIZ -->
+      <section class="tab-view" id="view-quiz">
+        <div class="section-hero">
+          <h2>🏆 UJIAN KELAYAKAN PROP FIRM &amp; ORDER FLOW</h2>
+          <p>Uji ketajaman naluri mikrostruktur pasar Anda melalui 10 skenario lelang nyata sebelum mempertaruhkan modal.</p>
+        </div>
+        <div class="quiz-container" id="quiz-container">
+          <!-- Rendered by app.js -->
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

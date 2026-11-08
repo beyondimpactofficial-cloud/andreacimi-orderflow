@@ -1,0 +1,702 @@
+[
+  {
+    "id": 1,
+    "term": "Absorption (Absorpsi)",
+    "def": "Penyerapan likuiditas agresif besar oleh likuiditas pasif limit order tersembunyi yang mengakibatkan pergerakan harga terhenti dan berbalik arah secara tajam.",
+    "category": "Prinsip Eksekusi Pasar",
+    "letter": "A"
+  },
+  {
+    "id": 2,
+    "term": "Aggressive Order",
+    "def": "Pesanan pasar (<em>Market Order</em>) yang menuntut eksekusi instan dan mengkonsumsi likuiditas yang tersedia di buku pesanan.",
+    "category": "Prinsip Eksekusi Pasar",
+    "letter": "A"
+  },
+  {
+    "id": 3,
+    "term": "Aggressor",
+    "def": "Partisipan pasar yang mengirimkan Market Order untuk memicu eksekusi seketika terhadap limit order yang sedang menunggu di bursa.",
+    "category": "Prinsip Eksekusi Pasar",
+    "letter": "A"
+  },
+  {
+    "id": 4,
+    "term": "Anchored VWAP (AVWAP)",
+    "def": "Rata-rata harga tertimbang volume yang dihitung dari titik jangkar waktu tertentu (misal: rilis data CPI, pembukaan sesi reguler RTH, atau Low tahunan).",
+    "category": "Prinsip Eksekusi Pasar",
+    "letter": "A"
+  },
+  {
+    "id": 5,
+    "term": "Ask (Offer)",
+    "def": "Level harga terendah di mana penjual pasif bersedia menjual kontrak mereka di Central Limit Order Book.",
+    "category": "Prinsip Eksekusi Pasar",
+    "letter": "A"
+  },
+  {
+    "id": 6,
+    "term": "Auction Market Theory (AMT)",
+    "def": "Model konseptual bursa yang memandang pasar keuangan sebagai proses lelang dua arah terus-menerus untuk memfasilitasi transaksi dan menemukan nilai wajar (<em>fair value</em>).",
+    "category": "Auction Market Theory (AMT)",
+    "letter": "A"
+  },
+  {
+    "id": 7,
+    "term": "Bar POC",
+    "def": "Level harga tunggal dengan akumulasi volume transaksi terbesar di dalam satu batang lilin Footprint tertentu.",
+    "category": "Auction Market Theory (AMT)",
+    "letter": "B"
+  },
+  {
+    "id": 8,
+    "term": "Bermudan Options",
+    "def": "Varian kontrak opsi yang dapat dieksekusi pada tanggal-tanggal spesifik sebelum tanggal jatuh tempo resmi.",
+    "category": "Options Flow & GEX",
+    "letter": "B"
+  },
+  {
+    "id": 9,
+    "term": "Best Bid",
+    "def": "Level harga tertinggi di mana pembeli pasif bersedia membeli kontrak di buku pesanan saat ini.",
+    "category": "Prinsip Eksekusi Pasar",
+    "letter": "B"
+  },
+  {
+    "id": 10,
+    "term": "Bid/Ask Spread",
+    "def": "Selisih harga antara Best Ask dan Best Bid (di pasar E-mini S&P 500, spread normal adalah 1 tick = 0.25 poin).",
+    "category": "Prinsip Eksekusi Pasar",
+    "letter": "B"
+  },
+  {
+    "id": 11,
+    "term": "Bid-Ask Bounce",
+    "def": "Fluktuasi harga bolak-balik antara Bid dan Ask tanpa adanya pergeseran rentang nilai wajar.",
+    "category": "Prinsip Eksekusi Pasar",
+    "letter": "B"
+  },
+  {
+    "id": 12,
+    "term": "Block Trade",
+    "def": "Transaksi kontrak berukuran sangat besar yang dinegosiasikan di luar buku pesanan publik (privat) sesuai regulasi bursa CME.",
+    "category": "Prinsip Eksekusi Pasar",
+    "letter": "B"
+  },
+  {
+    "id": 13,
+    "term": "Bookmap",
+    "def": "Software visualisasi heatmap likuiditas limit order historis dan transaksi pasar real-time berlatensi rendah.",
+    "category": "Prinsip Eksekusi Pasar",
+    "letter": "B"
+  },
+  {
+    "id": 14,
+    "term": "b-Shape Profile",
+    "def": "Profil volume dengan ekor tipis di atas dan tonjolan volume di bawah, mengindikasikan likuidasi posisi beli (long liquidation) di awal sesi lelang.",
+    "category": "Auction Market Theory (AMT)",
+    "letter": "B"
+  },
+  {
+    "id": 15,
+    "term": "Buying Tail (Ekor Pembeli)",
+    "def": "Jejak profil TPO atau lilin Footprint di dasar lelang yang terdiri dari single prints tanda penolakan harga rendah oleh pembeli institusi.",
+    "category": "Footprint & Delta",
+    "letter": "B"
+  },
+  {
+    "id": 16,
+    "term": "Call Wall",
+    "def": "Level strike opsi call dengan open interest/gamma terbesar yang bertindak sebagai batas plafon resistance magnetis terkuat bagi harga futures.",
+    "category": "Options Flow & GEX",
+    "letter": "C"
+  },
+  {
+    "id": 17,
+    "term": "Central Limit Order Book (CLOB)",
+    "def": "Buku catatan elektronik tersentralisasi tempat semua pesanan limit pembeli dan penjual dicocokkan secara mekanis oleh mesin bursa.",
+    "category": "DOM, MBO & Mikrostruktur",
+    "letter": "C"
+  },
+  {
+    "id": 18,
+    "term": "Composite Volume Profile",
+    "def": "Profil volume gabungan multi-minggu atau multi-bulan yang memetakan struktur nilai jangka panjang institusi.",
+    "category": "Auction Market Theory (AMT)",
+    "letter": "C"
+  },
+  {
+    "id": 19,
+    "term": "Confluence (Konfluensi)",
+    "def": "Pertemuan dua atau lebih level institusional di harga yang sama (misal: POC kemarin bertemu dengan VWAP harian dan Call Wall).",
+    "category": "Options Flow & GEX",
+    "letter": "C"
+  },
+  {
+    "id": 20,
+    "term": "Consolidation",
+    "def": "Periode perdagangan dua arah yang seimbang di mana pasar menerima harga di dalam rentang sempit tanpa deviasi signifikan.",
+    "category": "Prinsip Eksekusi Pasar",
+    "letter": "C"
+  },
+  {
+    "id": 21,
+    "term": "Cross-Asset Arbitrage",
+    "def": "Strategi lindung nilai kuantitatif yang mengeksploitasi perbedaan harga mikro antara instrumen ETF (misal SPY) dengan kontrak berjangka (ES).",
+    "category": "Prinsip Eksekusi Pasar",
+    "letter": "C"
+  },
+  {
+    "id": 22,
+    "term": "Cumulative Volume Delta (CVD)",
+    "def": "Akumulasi kumulatif dari selisih volume beli agresif dikurangi volume jual agresif sepanjang sesi perdagangan.",
+    "category": "Footprint & Delta",
+    "letter": "C"
+  },
+  {
+    "id": 23,
+    "term": "Day Type (Tipe Hari)",
+    "def": "Klasifikasi struktur pergerakan harian menurut teori lelang (Trend Day, Normal Day, Normal Variation Day, Neutral Day).",
+    "category": "Prinsip Eksekusi Pasar",
+    "letter": "D"
+  },
+  {
+    "id": 24,
+    "term": "Delta",
+    "def": "Selisih matematika antara volume Market Buy (di sisi Ask) dan volume Market Sell (di sisi Bid) pada suatu periode tertentu.",
+    "category": "Footprint & Delta",
+    "letter": "D"
+  },
+  {
+    "id": 25,
+    "term": "Delta Divergence",
+    "def": "Situasi anomali di mana harga mencetak High baru namun Delta mencetak titik puncak yang lebih rendah (Bearish Divergence).",
+    "category": "Footprint & Delta",
+    "letter": "D"
+  },
+  {
+    "id": 26,
+    "term": "Delta Hedging",
+    "def": "Tindakan lindung nilai yang dilakukan Market Maker opsi untuk menjaga portofolio mereka tetap netral dari risiko arah pergerakan harga underlying.",
+    "category": "Footprint & Delta",
+    "letter": "D"
+  },
+  {
+    "id": 27,
+    "term": "Depth of Market (DOM)",
+    "def": "Tampilan tabel buku pesanan yang memperlihatkan antrean volume limit order di setiap tingkatan harga.",
+    "category": "DOM, MBO & Mikrostruktur",
+    "letter": "D"
+  },
+  {
+    "id": 28,
+    "term": "Double Distribution",
+    "def": "Bentuk profil hari tren yang memiliki dua zona Value Area terpisah yang dihubungkan oleh celah tipis LVN (<em>single prints</em>).",
+    "category": "Auction Market Theory (AMT)",
+    "letter": "D"
+  },
+  {
+    "id": 29,
+    "term": "D-Shape Profile",
+    "def": "Profil volume simetris lonceng Gauss yang menandakan pasar sedang dalam kondisi seimbang (<em>balanced/ranging</em>).",
+    "category": "Auction Market Theory (AMT)",
+    "letter": "D"
+  },
+  {
+    "id": 30,
+    "term": "Dynamic VWAP Bands",
+    "def": "Pita standar deviasi bergerak di sekitar garis VWAP yang mengembang atau menyusut berdasarkan volatilitas transaksi riil.",
+    "category": "Prinsip Eksekusi Pasar",
+    "letter": "D"
+  },
+  {
+    "id": 31,
+    "term": "European Style Options",
+    "def": "Kontrak opsi indeks SPX yang hanya dapat dieksekusi pada saat tanggal kedaluwarsa resmi bursa.",
+    "category": "Options Flow & GEX",
+    "letter": "E"
+  },
+  {
+    "id": 32,
+    "term": "Execution Slippage",
+    "def": "Deviasi negatif antara harga pesanan yang dikirim dengan harga faktual pengisian di server bursa akibat pergeseran buku pesanan.",
+    "category": "Prinsip Eksekusi Pasar",
+    "letter": "E"
+  },
+  {
+    "id": 33,
+    "term": "Exhaustion",
+    "def": "Berhentinya pergerakan harga akibat hilangnya minat partisipan agresif (<em>lack of buying/selling pressure</em>), ditandai oleh volume yang menyusut drastis.",
+    "category": "Prinsip Eksekusi Pasar",
+    "letter": "E"
+  },
+  {
+    "id": 34,
+    "term": "Fade (Fading)",
+    "def": "Strategi trading kontra-tren di mana trader mengambil posisi berlawanan dengan arah momentum jangka pendek di level lelang ekstrem.",
+    "category": "Prinsip Eksekusi Pasar",
+    "letter": "F"
+  },
+  {
+    "id": 35,
+    "term": "Fair Value",
+    "def": "Zona harga konsensus di mana pembeli dan penjual sepakat untuk melakukan volume transaksi terbesar (diwakili oleh POC).",
+    "category": "Auction Market Theory (AMT)",
+    "letter": "F"
+  },
+  {
+    "id": 36,
+    "term": "FIFO (First In, First Out)",
+    "def": "Algoritma pencocokan bursa yang memprioritaskan eksekusi pesanan limit order yang masuk paling awal di urutan antrean.",
+    "category": "DOM, MBO & Mikrostruktur",
+    "letter": "F"
+  },
+  {
+    "id": 37,
+    "term": "Fill Rate",
+    "def": "Persentase kontrak dari pesanan limit order Anda yang berhasil tereksekusi sebelum ditarik atau dibatalkan.",
+    "category": "Prinsip Eksekusi Pasar",
+    "letter": "F"
+  },
+  {
+    "id": 38,
+    "term": "Finished Auction",
+    "def": "Kondisi ujung lelang di mana titik ekstrim lilin mencatat angka nol di sisi penawaran/permintaan, menandakan lelang telah tuntas sempurna.",
+    "category": "Auction Market Theory (AMT)",
+    "letter": "F"
+  },
+  {
+    "id": 39,
+    "term": "Footprint Chart",
+    "def": "Grafik candlestick dua dimensi yang membedah volume transaksi riil di sisi Bid dan Ask pada setiap tick harga.",
+    "category": "Footprint & Delta",
+    "letter": "F"
+  },
+  {
+    "id": 40,
+    "term": "Front Running",
+    "def": "Praktik mendahului pesanan besar yang terdeteksi di antrean (umumnya dilakukan oleh algoritma High-Frequency Trading).",
+    "category": "Prinsip Eksekusi Pasar",
+    "letter": "F"
+  },
+  {
+    "id": 41,
+    "term": "Gamma Exposure (GEX)",
+    "def": "Ukuran sensitivitas delta opsi terhadap pergerakan harga underlying yang menentukan rezim volatilitas bursa.",
+    "category": "Options Flow & GEX",
+    "letter": "G"
+  },
+  {
+    "id": 42,
+    "term": "Gamma Flip",
+    "def": "Level harga batas kritis pemisah antara rezim Positif Gamma (volatilitas rendah) dan Negatif Gamma (volatilitas tinggi).",
+    "category": "Options Flow & GEX",
+    "letter": "G"
+  },
+  {
+    "id": 43,
+    "term": "Golden Cross Ritel",
+    "def": "Mitos teknikal perpotongan garis rata-rata pergerakan yang mengalami kelambatan (lagging) puluhan jam di pasar berjangka.",
+    "category": "Prinsip Eksekusi Pasar",
+    "letter": "G"
+  },
+  {
+    "id": 44,
+    "term": "High Frequency Trading (HFT)",
+    "def": "Algoritma komputer berkecepatan mikrodetik yang menghasilkan jutaan pesanan per hari untuk meraup fraksi tick bursa.",
+    "category": "Prinsip Eksekusi Pasar",
+    "letter": "H"
+  },
+  {
+    "id": 45,
+    "term": "High Volume Node (HVN)",
+    "def": "Puncak tonjolan volume pada profil lelang yang menandakan penerimaan harga dan bertindak sebagai zona magnet konsolidasi.",
+    "category": "Auction Market Theory (AMT)",
+    "letter": "H"
+  },
+  {
+    "id": 46,
+    "term": "Iceberg Order",
+    "def": "Pesanan limit order raksasa yang dibagi menjadi porsi kecil yang tampak di layar (<em>visible size</em>) sementara sisanya disembunyikan (<em>hidden size</em>).",
+    "category": "DOM, MBO & Mikrostruktur",
+    "letter": "I"
+  },
+  {
+    "id": 47,
+    "term": "Imbalance (Diagonal)",
+    "def": "Kondisi di mana volume agresif di satu sisi diagonal melebihi sisi lawannya dengan rasio minimal 300% (3:1).",
+    "category": "Footprint & Delta",
+    "letter": "I"
+  },
+  {
+    "id": 48,
+    "term": "Imbalance Percentage",
+    "def": "Ambang batas rasio diagonal (biasanya 300% atau 400%) untuk menetapkan dominasi pembeli atau penjual agresif di Footprint.",
+    "category": "Footprint & Delta",
+    "letter": "I"
+  },
+  {
+    "id": 49,
+    "term": "Initial Balance (IB)",
+    "def": "Rentang harga tertinggi dan terendah yang terbentuk pada 1 jam pertama sesi reguler bursa New York (09:30–10:30 EST).",
+    "category": "Prinsip Eksekusi Pasar",
+    "letter": "I"
+  },
+  {
+    "id": 50,
+    "term": "Inside Day",
+    "def": "Hari perdagangan di mana seluruh rentang lelang High dan Low berada di dalam rentang lelang hari sebelumnya.",
+    "category": "Prinsip Eksekusi Pasar",
+    "letter": "I"
+  },
+  {
+    "id": 51,
+    "term": "Latency Arbitrage",
+    "def": "Pemanfaatan perbedaan kecepatan sepersekian mikrodetik dalam transmisi data feed antara Chicago dan New York.",
+    "category": "Prinsip Eksekusi Pasar",
+    "letter": "L"
+  },
+  {
+    "id": 52,
+    "term": "Layering",
+    "def": "Praktik manipulatif ilegal dengan memasang pesanan limit palsu berlapis-lapis di DOM untuk menciptakan ilusi likuiditas palsu sebelum membatalkannya.",
+    "category": "DOM, MBO & Mikrostruktur",
+    "letter": "L"
+  },
+  {
+    "id": 53,
+    "term": "Limit Order",
+    "def": "Pesanan pasif yang menetapkan harga maksimum saat membeli atau harga minimum saat menjual.",
+    "category": "Prinsip Eksekusi Pasar",
+    "letter": "L"
+  },
+  {
+    "id": 54,
+    "term": "Liquidity Sweep",
+    "def": "Gerakan menusuk cepat ke luar rentang lelang untuk mengeksekusi kumpulan Stop Loss sebelum berbalik arah kembali ke nilai wajar.",
+    "category": "Prinsip Eksekusi Pasar",
+    "letter": "L"
+  },
+  {
+    "id": 55,
+    "term": "Low Volume Node (LVN)",
+    "def": "Lembah cekungan tipis pada profil volume yang menandakan penolakan harga (<em>price rejection</em>) dan bertindak sebagai support/resistance solid.",
+    "category": "Auction Market Theory (AMT)",
+    "letter": "L"
+  },
+  {
+    "id": 56,
+    "term": "Market By Order (MBO)",
+    "def": "Feed data bursa Level 3 yang memberikan ID individual untuk setiap pesanan dalam antrean lelang CME.",
+    "category": "DOM, MBO & Mikrostruktur",
+    "letter": "M"
+  },
+  {
+    "id": 57,
+    "term": "Market By Price (MBP)",
+    "def": "Feed data bursa Level 2 standar yang menggabungkan total volume di setiap tingkatan harga tanpa rincian ID pesanan.",
+    "category": "DOM, MBO & Mikrostruktur",
+    "letter": "M"
+  },
+  {
+    "id": 58,
+    "term": "Market If Touched (MIT)",
+    "def": "Pesanan bersyarat yang berubah menjadi Market Order begitu harga menyentuh level pemicu tertentu.",
+    "category": "Prinsip Eksekusi Pasar",
+    "letter": "M"
+  },
+  {
+    "id": 59,
+    "term": "Market Order",
+    "def": "Pesanan agresif yang dieksekusi seketika pada harga pasar terbaik yang tersedia di buku pesanan.",
+    "category": "Prinsip Eksekusi Pasar",
+    "letter": "M"
+  },
+  {
+    "id": 60,
+    "term": "Max Delta",
+    "def": "Nilai delta tertinggi yang pernah dicapai selama satu batang lilin Footprint berjalan.",
+    "category": "Footprint & Delta",
+    "letter": "M"
+  },
+  {
+    "id": 61,
+    "term": "Mean Reversion",
+    "def": "Kecenderungan statistik harga untuk kembali ke nilai rata-rata wajar (POC atau VWAP) setelah mengalami deviasi ekstrem.",
+    "category": "Auction Market Theory (AMT)",
+    "letter": "M"
+  },
+  {
+    "id": 62,
+    "term": "Micro E-mini (MES / MNQ)",
+    "def": "Kontrak berjangka bursa CME dengan ukuran nilai 1/10 dari kontrak E-mini standar, ideal untuk membangun modal awal.",
+    "category": "Prinsip Eksekusi Pasar",
+    "letter": "M"
+  },
+  {
+    "id": 63,
+    "term": "Min Delta",
+    "def": "Nilai delta terendah yang pernah dicapai selama satu batang lilin Footprint berjalan.",
+    "category": "Footprint & Delta",
+    "letter": "M"
+  },
+  {
+    "id": 64,
+    "term": "Naked POC",
+    "def": "Level Point of Control dari sesi perdagangan sebelumnya yang belum pernah tersentuh kembali oleh harga di sesi berikutnya.",
+    "category": "Auction Market Theory (AMT)",
+    "letter": "N"
+  },
+  {
+    "id": 65,
+    "term": "Negative Delta",
+    "def": "Situasi di mana volume transaksi di sisi Bid melampaui volume transaksi di sisi Ask pada lilin berjalan.",
+    "category": "Footprint & Delta",
+    "letter": "N"
+  },
+  {
+    "id": 66,
+    "term": "Negative Gamma (-GEX)",
+    "def": "Kondisi pasar di mana Market Maker terpaksa menjual saat harga turun dan membeli saat harga naik, memicu volatilitas eksplosif tanpa rem.",
+    "category": "Options Flow & GEX",
+    "letter": "N"
+  },
+  {
+    "id": 67,
+    "term": "Net Inventory",
+    "def": "Akumulasi posisi terbuka agregat dari seluruh pelaku pasar dalam satu sesi tertentu (misal: Overnight Net Long).",
+    "category": "Prinsip Eksekusi Pasar",
+    "letter": "N"
+  },
+  {
+    "id": 68,
+    "term": "Non-Farm Payroll (NFP)",
+    "def": "Laporan ketenagakerjaan bulanan AS yang memicu lonjakan volatilitas terbesar di pasar berjangka suku bunga dan indeks saham.",
+    "category": "Prinsip Eksekusi Pasar",
+    "letter": "N"
+  },
+  {
+    "id": 69,
+    "term": "One-Time Framing",
+    "def": "Struktur tren lelang yang kuat di mana setiap lilin berturut-turut mencetak High lebih tinggi (Bullish) atau Low lebih rendah (Bearish).",
+    "category": "Prinsip Eksekusi Pasar",
+    "letter": "O"
+  },
+  {
+    "id": 70,
+    "term": "Opening Range (OR)",
+    "def": "Rentang harga High dan Low pada 5 menit pertama pembukaan sesi perdagangan reguler bursa New York (09:30–09:35 EST).",
+    "category": "Prinsip Eksekusi Pasar",
+    "letter": "O"
+  },
+  {
+    "id": 71,
+    "term": "Order Book Depth",
+    "def": "Kuantitas total kontrak yang tersedia di beberapa tingkatan harga di atas dan di bawah harga pasar saat ini di DOM.",
+    "category": "DOM, MBO & Mikrostruktur",
+    "letter": "O"
+  },
+  {
+    "id": 72,
+    "term": "Passive Order",
+    "def": "Pesanan limit order yang duduk di DOM dan menyediakan likuiditas bagi pasar tanpa menggerakkan harga.",
+    "category": "DOM, MBO & Mikrostruktur",
+    "letter": "P"
+  },
+  {
+    "id": 73,
+    "term": "Passive Seller",
+    "def": "Penjual yang memasang Limit Order di sisi Offer dan menunggu pembeli agresif menghantam pesanannya.",
+    "category": "Prinsip Eksekusi Pasar",
+    "letter": "P"
+  },
+  {
+    "id": 74,
+    "term": "Point of Control (POC)",
+    "def": "Level harga dengan volume transaksi paling masif di dalam suatu profil lelang tertentu.",
+    "category": "Auction Market Theory (AMT)",
+    "letter": "P"
+  },
+  {
+    "id": 75,
+    "term": "Point of Control Migration",
+    "def": "Pergeseran dinamis level POC ke atas atau ke bawah sepanjang sesi berjalan yang mengindikasikan penerimaan nilai baru.",
+    "category": "Auction Market Theory (AMT)",
+    "letter": "P"
+  },
+  {
+    "id": 76,
+    "term": "Poor High (Unfinished Auction High)",
+    "def": "Titik puncak lilin lelang yang masih memiliki transaksi volume aktif di kedua sisi, bertindak sebagai magnet penjemputan harga.",
+    "category": "Auction Market Theory (AMT)",
+    "letter": "P"
+  },
+  {
+    "id": 77,
+    "term": "Poor Low (Unfinished Auction Low)",
+    "def": "Titik lembah lilin lelang yang masih memiliki transaksi volume aktif di kedua sisi tanpa pencapaian angka nol.",
+    "category": "Auction Market Theory (AMT)",
+    "letter": "P"
+  },
+  {
+    "id": 78,
+    "term": "Positive Delta",
+    "def": "Situasi di mana volume transaksi di sisi Ask melampaui volume transaksi di sisi Bid pada lilin berjalan.",
+    "category": "Footprint & Delta",
+    "letter": "P"
+  },
+  {
+    "id": 79,
+    "term": "Positive Gamma (+GEX)",
+    "def": "Kondisi pasar di mana Market Maker melakukan lindung nilai kontra-tren, meredam volatilitas dan menciptakan pasar sideways.",
+    "category": "Options Flow & GEX",
+    "letter": "P"
+  },
+  {
+    "id": 80,
+    "term": "Price Discovery",
+    "def": "Proses dinamis lelang pasar dalam mencari level harga baru yang dapat memfasilitasi transaksi dua arah secara maksimal.",
+    "category": "Prinsip Eksekusi Pasar",
+    "letter": "P"
+  },
+  {
+    "id": 81,
+    "term": "P-Shape Profile",
+    "def": "Profil volume dengan ekor tipis di bawah dan tonjolan volume di atas, menandakan inisiatif pembeli agresif (short covering) di awal sesi.",
+    "category": "Auction Market Theory (AMT)",
+    "letter": "P"
+  },
+  {
+    "id": 82,
+    "term": "Put Wall",
+    "def": "Level strike opsi put dengan open interest terbesar yang bertindak sebagai batas lantai support magnetis terkuat.",
+    "category": "Options Flow & GEX",
+    "letter": "P"
+  },
+  {
+    "id": 83,
+    "term": "Queue Position",
+    "def": "Nomor urut antrean pesanan limit order Anda di mesin pencocok bursa CME menurut aturan FIFO.",
+    "category": "DOM, MBO & Mikrostruktur",
+    "letter": "Q"
+  },
+  {
+    "id": 84,
+    "term": "Rithmic",
+    "def": "Penyedia infrastruktur data feed berjangka CME berlatensi rendah yang umum digunakan di industri evaluasi Prop Firm.",
+    "category": "Prop Firm & Platform",
+    "letter": "R"
+  },
+  {
+    "id": 85,
+    "term": "Selling Tail (Ekor Penjual)",
+    "def": "Jejak profil di puncak lelang tanda penolakan harga mahal oleh penjual institusi.",
+    "category": "Prinsip Eksekusi Pasar",
+    "letter": "S"
+  },
+  {
+    "id": 86,
+    "term": "Sierra Chart",
+    "def": "Software charting order flow profesional berbasis C++ dengan latensi terendah dan akurasi data MBO tertinggi di dunia.",
+    "category": "DOM, MBO & Mikrostruktur",
+    "letter": "S"
+  },
+  {
+    "id": 87,
+    "term": "Slippage",
+    "def": "Selisih kerugian antara harga yang Anda inginkan dengan harga eksekusi riil yang didapatkan saat memasang market order.",
+    "category": "Prinsip Eksekusi Pasar",
+    "letter": "S"
+  },
+  {
+    "id": 88,
+    "term": "Spoofing",
+    "def": "Tindakan ilegal memasang order limit palsu berukuran besar di DOM tanpa niat mengeksekusinya demi menakut-nakuti partisipan lain.",
+    "category": "DOM, MBO & Mikrostruktur",
+    "letter": "S"
+  },
+  {
+    "id": 89,
+    "term": "Stacked Imbalance",
+    "def": "Formasi minimal 3 level harga berurutan yang mengalami diagonal imbalance di sisi yang sama, menciptakan benteng support/resistance institusi.",
+    "category": "Footprint & Delta",
+    "letter": "S"
+  },
+  {
+    "id": 90,
+    "term": "Stop Run",
+    "def": "Gerakan harga agresif yang disengaja untuk memicu kluster pesanan Stop Loss di pasar yang sedang tipis likuiditasnya.",
+    "category": "Prinsip Eksekusi Pasar",
+    "letter": "S"
+  },
+  {
+    "id": 91,
+    "term": "Synthetic Iceberg",
+    "def": "Pesanan tersembunyi yang dijalankan oleh algoritma perantara broker, bukan oleh mesin native bursa CME.",
+    "category": "DOM, MBO & Mikrostruktur",
+    "letter": "S"
+  },
+  {
+    "id": 92,
+    "term": "Time and Sales (The Tape)",
+    "def": "Aliran log transaksi individual yang mencatat waktu presisi milidetik, harga, volume, dan agresor setiap perdagangan yang tuntas.",
+    "category": "DOM, MBO & Mikrostruktur",
+    "letter": "T"
+  },
+  {
+    "id": 93,
+    "term": "Trailing Drawdown",
+    "def": "Aturan batas risiko modal prop firm yang terus bergeser naik mengikuti puncak floating profit tertinggi akun.",
+    "category": "Prop Firm & Platform",
+    "letter": "T"
+  },
+  {
+    "id": 94,
+    "term": "Unfinished Auction",
+    "def": "Struktur ujung lelang yang berhenti prematur tanpa menghasilkan angka nol di sisi penawaran atau permintaan.",
+    "category": "Auction Market Theory (AMT)",
+    "letter": "U"
+  },
+  {
+    "id": 95,
+    "term": "Value Area (VA)",
+    "def": "Rentang harga lelang yang mencakup 68% dari total volume transaksi harian (1 standar deviasi distribusi normal lelang).",
+    "category": "Auction Market Theory (AMT)",
+    "letter": "V"
+  },
+  {
+    "id": 96,
+    "term": "Value Area High (VAH)",
+    "def": "Batas atas zona nilai wajar 68% pada Volume Profile.",
+    "category": "Auction Market Theory (AMT)",
+    "letter": "V"
+  },
+  {
+    "id": 97,
+    "term": "Value Area Low (VAL)",
+    "def": "Batas bawah zona nilai wajar 68% pada Volume Profile.",
+    "category": "Auction Market Theory (AMT)",
+    "letter": "V"
+  },
+  {
+    "id": 98,
+    "term": "Volume Profile",
+    "def": "Representasi grafis horizontal dari volume transaksi riil di setiap tingkatan harga sepanjang lelang.",
+    "category": "Auction Market Theory (AMT)",
+    "letter": "V"
+  },
+  {
+    "id": 99,
+    "term": "Volume Weighted Average Price (VWAP)",
+    "def": "Garis rata-rata harga tertimbang volume transaksi riil yang menjadi tolak ukur efisiensi eksekusi institusi Wall Street.",
+    "category": "Prinsip Eksekusi Pasar",
+    "letter": "V"
+  },
+  {
+    "id": 100,
+    "term": "Zero Delta Bar",
+    "def": "Lilin Footprint di mana jumlah volume pembelian agresif sama persis dengan volume penjualan agresif (keseimbangan mutlak lelang).",
+    "category": "Footprint & Delta",
+    "letter": "Z"
+  }
+]

@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Institutional Liquidity &amp; Order Flow Blueprint Â· Faber Vaale Masterclass</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ==========================================================================
+       CORE DESIGN SYSTEM & RESET
+       ========================================================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg-canvas: #020617;
+      --bg-surface: #0b1120;
+      --bg-card: rgba(15, 23, 42, 0.85);
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-gold: rgba(234, 179, 8, 0.4);
+      --border-cyan: rgba(56, 189, 248, 0.4);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --gold-primary: #fbbf24;
+      --cyan-primary: #38bdf8;
+      --emerald-primary: #10b981;
+      --rose-primary: #f43f5e;
+      --header-height: 64px;
+      --nav-height: 48px;
+    }
+
+    body {
+      background-color: var(--bg-canvas);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ==========================================================================
+       APP HEADER
+       ========================================================================== */
+    .app-header {
+      height: var(--header-height);
+      background: rgba(11, 17, 32, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand-badge {
+      background: rgba(234, 179, 8, 0.15);
+      color: var(--gold-primary);
+      border: 1px solid var(--border-gold);
+      padding: 4px 10px;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      font-family: 'Cinzel', serif;
+    }
+
+    .brand-title {
+      font-family: 'Cinzel', serif;
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      color: #fff;
+    }
+
+    .brand-title span {
+      color: var(--gold-primary);
+    }
+
+    .header-center {
+      display: flex;
+      align-items: center;
+      background: rgba(2, 6, 23, 0.7);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 4px;
+      gap: 4px;
+    }
+
+    .view-mode-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 6px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .view-mode-btn:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .view-mode-btn.active {
+      background: #1e293b;
+      color: var(--gold-primary);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .search-box {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .search-box svg {
+      position: absolute;
+      left: 12px;
+      color: var(--text-muted);
+      pointer-events: none;
+    }
+
+    .search-box input {
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid var(--border-subtle);
+      border-radius: 6px;
+      padding: 7px 12px 7px 34px;
+      color: #fff;
+      font-size: 12px;
+      font-family: inherit;
+      width: 220px;
+      transition: all 0.2s ease;
+    }
+
+    .search-box input:focus {
+      outline: none;
+      border-color: var(--gold-primary);
+      width: 280px;
+      background: #0f172a;
+    }
+
+    .header-btn {
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      padding: 7px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+    }
+
+    .header-btn:hover {
+      background: #1e293b;
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .header-btn-download {
+      background: linear-gradient(135deg, rgba(234, 179, 8, 0.2) 0%, rgba(217, 119, 6, 0.2) 100%);
+      border-color: var(--border-gold);
+      color: var(--gold-primary);
+    }
+
+    .header-btn-download:hover {
+      background: var(--gold-primary);
+      color: #020617;
+      border-color: var(--gold-primary);
+    }
+
+    /* ==========================================================================
+       MODULE FILTER BAR
+       ========================================================================== */
+    .module-bar {
+      height: var(--nav-height);
+      background: #090e1a;
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0 24px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      position: sticky;
+      top: var(--header-height);
+      z-index: 900;
+    }
+
+    .module-bar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .module-chip {
+      background: transparent;
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      padding: 5px 12px;
+      font-size: 11px;
+      font-weight: 600;
+      border-radius: 20px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .module-chip:hover {
+      border-color: rgba(255, 255, 255, 0.2);
+      color: #fff;
+    }
+
+    .module-chip.active {
+      background: rgba(234, 179, 8, 0.15);
+      border-color: var(--gold-primary);
+      color: var(--gold-primary);
+    }
+
+    .chip-count {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 1px 6px;
+      border-radius: 10px;
+    }
+
+    .module-chip.active .chip-count {
+      background: var(--gold-primary);
+      color: #020617;
+      font-weight: 700;
+    }
+
+    /* ==========================================================================
+       VIEWPORT CONTAINERS
+       ========================================================================== */
+    .viewport {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    /* MODE: SLIDE DECK VIEW */
+    .slide-view-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: radial-gradient(circle at center, #0f172a 0%, #020617 80%);
+      min-height: calc(100vh - var(--header-height) - var(--nav-height) - 64px);
+    }
+
+    .slide-frame {
+      width: 100%;
+      max-width: 1200px;
+      aspect-ratio: 297 / 210;
+      background: #030712;
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 30px rgba(234, 179, 8, 0.05);
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .slide-frame:fullscreen {
+      max-width: none;
+      width: 100vw;
+      height: 100vh;
+      border-radius: 0;
+      border: none;
+    }
+
+    /* SLIDE CONTROLS BAR */
+    .slide-controls-bar {
+      height: 64px;
+      background: #090e1a;
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 32px;
+      position: sticky;
+      bottom: 0;
+      z-index: 1000;
+    }
+
+    .ctrl-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .ctrl-btn {
+      background: #1e293b;
+      border: 1px solid var(--border-subtle);
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .ctrl-btn:hover:not(:disabled) {
+      background: var(--gold-primary);
+      color: #020617;
+      border-color: var(--gold-primary);
+    }
+
+    .ctrl-btn:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+
+    .slide-jump-select {
+      background: #0f172a;
+      border: 1px solid var(--border-subtle);
+      color: var(--text-main);
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-family: inherit;
+      max-width: 320px;
+    }
+
+    .slide-jump-select:focus {
+      outline: none;
+      border-color: var(--gold-primary);
+    }
+
+    .ctrl-center {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      color: var(--gold-primary);
+      font-weight: 700;
+    }
+
+    .ctrl-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .shortcut-pill {
+      font-size: 11px;
+      color: var(--text-muted);
+      background: rgba(255, 255, 255, 0.05);
+      padding: 4px 10px;
+      border-radius: 4px;
+      border: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .shortcut-pill kbd {
+      background: #020617;
+      border: 1px solid #334155;
+      padding: 1px 5px;
+      border-radius: 3px;
+      font-family: 'JetBrains Mono', monospace;
+      color: #fff;
+    }
+
+    /* MODE: CONTINUOUS DOCUMENT VIEW */
+    .continuous-view {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 24px;
+      gap: 32px;
+      background: #020617;
+    }
+
+    .continuous-view .slide {
+      width: 100%;
+      max-width: 1150px;
+      min-height: auto;
+      margin-bottom: 24px;
+      border-radius: 8px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+    }
+
+    /* MODE: GRID OVERVIEW */
+    .grid-view {
+      display: none;
+      padding: 32px 24px;
+      max-width: 1400px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .slides-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .grid-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 16px;
+      cursor: pointer;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 180px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .grid-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--border-subtle);
+      transition: background 0.25s ease;
+    }
+
+    .grid-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--gold-primary);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5), 0 0 15px rgba(234, 179, 8, 0.15);
+    }
+
+    .grid-card:hover::before {
+      background: var(--gold-primary);
+    }
+
+    .grid-card-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--gold-primary);
+      font-weight: 700;
+    }
+
+    .grid-card-mod {
+      font-size: 10px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 4px;
+    }
+
+    .grid-card-title {
+      font-family: 'Cinzel', serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: #fff;
+      margin-top: 8px;
+      line-height: 1.35;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .grid-card-badge {
+      font-size: 9px;
+      background: rgba(255, 255, 255, 0.06);
+      padding: 3px 8px;
+      border-radius: 4px;
+      color: var(--cyan-primary);
+      font-family: 'JetBrains Mono', monospace;
+      align-self: flex-start;
+      margin-top: auto;
+    }
+
+    /* SEARCH RESULTS BANNER */
+    .search-alert {
+      background: rgba(234, 179, 8, 0.1);
+      border: 1px solid var(--border-gold);
+      color: var(--gold-primary);
+      padding: 10px 20px;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      font-size: 13px;
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* INJECTED SLIDE THEME CSS (FROM MASTERCLASS) */
+    <style>
+  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Cinzel:wght@600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+  @page {
+    size: A4 landscape;
+    margin: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: #06090f;
+    color: #e2e8f0;
+    margin: 0;
+    padding: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* SLIDE CONTAINER */
+  .slide {
+    width: 297mm;
+    height: 210mm;
+    max-height: 210mm;
+    page-break-after: always;
+    page-break-inside: avoid;
+    padding: 14mm 18mm 12mm 18mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: radial-gradient(circle at 85% 15%, #0f172a 0%, #080c16 65%, #04060a 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* SLIDE HEADER */
+  .slide-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid #1e293b;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+  }
+
+  .slide-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .module-tag {
+    font-size: 7.5pt;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #d4af37;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .module-tag::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #d4af37;
+    border-radius: 50%;
+  }
+
+  .slide-title {
+    font-family: 'Cinzel', serif;
+    font-size: 15.5pt;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+  }
+
+  .slide-subtitle {
+    font-size: 8.5pt;
+    color: #94a3b8;
+    font-weight: 400;
+  }
+
+  .header-badge {
+    background: rgba(212, 175, 55, 0.12);
+    border: 1px solid rgba(212, 175, 55, 0.5);
+    color: #d4af37;
+    font-size: 7.5pt;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  /* SLIDE BODY & GRIDS */
+  .slide-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+  }
+
+  .grid-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+  }
+
+  /* CARDS */
+  .card {
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid #1e293b;
+    border-radius: 6px;
+    padding: 12px 14px;
+    font-size: 8.5pt;
+    line-height: 1.5;
+  }
+
+  .card-highlight {
+    border-color: #d4af37;
+    background: rgba(212, 175, 55, 0.05);
+  }
+
+  .card-buy {
+    border-color: #10b981;
+    background: rgba(16, 185, 129, 0.06);
+  }
+
+  .card-sell {
+    border-color: #ef4444;
+    background: rgba(239, 68, 68, 0.06);
+  }
+
+  .card-cyan {
+    border-color: #38bdf8;
+    background: rgba(56, 189, 248, 0.06);
+  }
+
+  .card-title {
+    font-weight: 700;
+    font-size: 9.5pt;
+    color: #fff;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .card-title-gold { color: #d4af37; }
+  .card-title-buy { color: #10b981; }
+  .card-title-sell { color: #ef4444; }
+  .card-title-cyan { color: #38bdf8; }
+
+  /* CALLOUTS */
+  .callout {
+    background: rgba(212, 175, 55, 0.08);
+    border-left: 3.5px solid #d4af37;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 8pt;
+    line-height: 1.45;
+    color: #fef3c7;
+    margin-top: 6px;
+  }
+
+  .callout-cyan {
+    background: rgba(56, 189, 248, 0.08);
+    border-left: 3.5px solid #38bdf8;
+    color: #e0f2fe;
+  }
+
+  /* LISTS & TEXT */
+  p {
+    font-size: 8.5pt;
+    line-height: 1.5;
+    color: #cbd5e1;
+    margin-bottom: 6px;
+    text-align: justify;
+  }
+
+  ul, ol {
+    padding-left: 16px;
+    margin-bottom: 6px;
+    font-size: 8.2pt;
+    line-height: 1.45;
+  }
+
+  li {
+    margin-bottom: 3px;
+    color: #cbd5e1;
+  }
+
+  strong {
+    color: #ffffff;
+  }
+
+  /* CODE & ASCII */
+  pre {
+    background: #04070e;
+    border: 1px solid #1e293b;
+    border-radius: 4px;
+    padding: 8px 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 7.2pt;
+    line-height: 1.35;
+    color: #e2e8f0;
+    overflow: hidden;
+    margin: 6px 0;
+  }
+
+  code {
+    font-family: 'JetBrains Mono', monospace;
+    color: #d4af37;
+    background: #0f172a;
+    padding: 1px 4px;
+    border-radius: 3px;
+    font-size: 7.8pt;
+  }
+
+  /* TABLES */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8pt;
+    margin: 6px 0;
+  }
+
+  th {
+    background: #0b1324;
+    color: #fff;
+    font-weight: 700;
+    padding: 6px 8px;
+    border: 1px solid #1e293b;
+    text-align: left;
+  }
+
+  td {
+    padding: 5px 8px;
+    border: 1px solid #1e293b;
+    background: rgba(15, 23, 42, 0.5);
+    color: #cbd5e1;
+  }
+
+  tr:nth-child(even) td {
+    background: rgba(15, 23, 42, 0.8);
+  }
+
+  /* METRICS & NUMBERS */
+  .metric-box {
+    text-align: center;
+    background: #0a0f1d;
+    border: 1px solid #1e293b;
+    border-radius: 4px;
+    padding: 8px;
+  }
+
+  .metric-val {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 15pt;
+    font-weight: 800;
+    color: #d4af37;
+  }
+
+  .metric-label {
+    font-size: 7pt;
+    text-transform: uppercase;
+    color: #94a3b8;
+    letter-spacing: 1px;
+    margin-top: 2px;
+  }
+
+  /* SLIDE FOOTER */
+  .slide-footer {
+    border-top: 1px solid #1e293b;
+    padding-top: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 7.5pt;
+    color: #64748b;
+  }
+
+  .footer-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .footer-dot {
+    width: 4px;
+    height: 4px;
+    background: #d4af37;
+    border-radius: 50%;
+  }
+
+  .slide-page-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    color: #d4af37;
+    background: rgba(212, 175, 55, 0.1);
+    padding: 2px 6px;
+    border-radius: 3px;
+  }
+
+  /* COVER SLIDE SPECIAL */
+  .cover-slide {
+    background: radial-gradient(circle at 80% 20%, #1e293b 0%, #090d16 70%, #030508 100%);
+    padding: 25mm 25mm 20mm 25mm;
+    justify-content: space-between;
+  }
+
+  .cover-badge-top {
+    display: inline-block;
+    border: 1px solid rgba(212, 175, 55, 0.6);
+    background: rgba(212, 175, 55, 0.12);
+    color: #d4af37;
+    font-size: 9pt;
+    font-weight: 800;
+    letter-spacing: 3px;
+    padding: 6px 14px;
+    border-radius: 4px;
+    text-transform: uppercase;
+  }
+
+  .cover-title-main {
+    font-family: 'Cinzel', serif;
+    font-size: 32pt;
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1.15;
+    margin: 18px 0 12px 0;
+  }
+
+  .cover-title-main span {
+    color: #d4af37;
+    display: block;
+  }
+
+  .cover-sub {
+    font-size: 11pt;
+    line-height: 1.6;
+    color: #94a3b8;
+    max-width: 780px;
+  }
+
+  .cover-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    border-top: 1px solid #1e293b;
+    padding-top: 18px;
+  }
+</style>
+
+    /* ADAPTATIONS FOR EMBEDDED WEB SLIDES */
+    .slide-frame .slide {
+      width: 100% !important;
+      height: 100% !important;
+      box-shadow: none !important;
+      border: none !important;
+      margin: 0 !important;
+      page-break-after: unset !important;
+    }
+
+    /* Responsive scaling for slide contents */
+    @media (max-width: 900px) {
+      .app-header {
+        padding: 0 12px;
+      }
+      .brand-title {
+        display: none;
+      }
+      .search-box input {
+        width: 140px;
+      }
+      .search-box input:focus {
+        width: 180px;
+      }
+      .shortcut-pill {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="app-header">
+    <div class="header-left">
+      <div class="brand-badge">3x World Cup Podium</div>
+      <div class="brand-title">
+        FABER VAALE <span>BLUEPRINT</span>
+      </div>
+    </div>
+
+    <!-- VIEW MODE SWITCHER -->
+    <div class="header-center">
+      <button class="view-mode-btn active" data-mode="slide">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+        Slide Deck
+      </button>
+      <button class="view-mode-btn" data-mode="continuous">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+        Dokumen
+      </button>
+      <button class="view-mode-btn" data-mode="grid">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+        Galeri (50)
+      </button>
+    </div>
+
+    <!-- ACTIONS -->
+    <div class="header-right">
+      <div class="search-box">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="slide-search" placeholder="Cari konsep, delta, ORB...">
+      </div>
+
+      <a href="/THE_INSTITUTIONAL_LIQUIDITY_ORDER_FLOW_BLUEPRINT.pdf" download class="header-btn header-btn-download" title="Unduh File PDF Resmi">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+        Unduh PDF
+      </a>
+
+      <button id="btn-fullscreen" class="header-btn" title="Layar Penuh (F)">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+      </button>
+
+      <a href="http://localhost:3333" target="_blank" class="header-btn" title="Buka Portal Andrea Cimi di Tab Terpisah (Port 3333)">
+        🌐 Portal Andrea Cimi (3333) ↗
+      </a>
+    </div>
+  </header>
+
+  <!-- MODULE QUICK FILTER BAR -->
+  <nav class="module-bar" id="module-bar">
+    <button class="module-chip active" data-mod="all">Semua Modul <span class="chip-count">50</span></button>
+    <button class="module-chip" data-mod="mod1">Modul 1: Liquidity &amp; DOM <span class="chip-count">7</span></button>
+    <button class="module-chip" data-mod="mod2">Modul 2: Footprint 2D <span class="chip-count">7</span></button>
+    <button class="module-chip" data-mod="mod3">Modul 3: 5 Edges <span class="chip-count">7</span></button>
+    <button class="module-chip" data-mod="mod4">Modul 4: Execution Models <span class="chip-count">7</span></button>
+    <button class="module-chip" data-mod="mod5">Modul 5: Risk Geometry <span class="chip-count">6</span></button>
+    <button class="module-chip" data-mod="mod6">Modul 6: Mindset 500% <span class="chip-count">3</span></button>
+    <button class="module-chip" data-mod="mod7">Modul 7: 13 Shorts <span class="chip-count">3</span></button>
+    <button class="module-chip" data-mod="mod8">Modul 8: Stack &amp; SOP <span class="chip-count">3</span></button>
+    <button class="module-chip" data-mod="glossary">Glosarium &amp; Manifesto <span class="chip-count">4</span></button>
+  </nav>
+
+  <!-- VIEWPORTS -->
+  <main class="viewport">
+    
+    <!-- 1. SLIDE PRESENTATION MODE -->
+    <section class="slide-view-container" id="slide-mode-container">
+      <div class="slide-frame" id="slide-frame">
+        <!-- Injected Slide HTML -->
+        <div id="active-slide-mount"></div>
+      </div>
+    </section>
+
+    <!-- 2. CONTINUOUS DOCUMENT MODE -->
+    <section class="continuous-view" id="continuous-mode-container">
+      <!-- Injected all slides stacked -->
+    </section>
+
+    <!-- 3. GRID OVERVIEW MODE -->
+    <section class="grid-view" id="grid-mode-container">
+      <div class="search-alert" id="search-alert">
+        <span>Menampilkan hasil pencarian untuk: <strong id="search-query-text"></strong></span>
+        <button id="btn-clear-search" style="background:none; border:none; color:inherit; cursor:pointer; font-weight:700;">âœ• Bersihkan</button>
+      </div>
+      <div class="slides-grid" id="slides-grid"></div>
+    </section>
+
+  </main>
+
+  <!-- FLOATING SLIDE CONTROLS (ACTIVE IN SLIDE MODE) -->
+  <footer class="slide-controls-bar" id="slide-controls-bar">
+    <div class="ctrl-left">
+      <button class="ctrl-btn" id="btn-prev-slide">
+        â—€ Sebelumnya
+      </button>
+      <select class="slide-jump-select" id="slide-jump-select"></select>
+      <button class="ctrl-btn" id="btn-next-slide">
+        Berikutnya â–¶
+      </button>
+    </div>
+
+    <div class="ctrl-center">
+      <span id="current-slide-indicator">01 / 50</span>
+    </div>
+
+    <div class="ctrl-right">
+      <div class="shortcut-pill">
+        <span>Navigasi:</span>
+        <kbd>â† </kbd> <kbd>â†’</kbd> <kbd>Spasi</kbd> <kbd>F</kbd>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script src="faber.js"></script>
+</body>
+</html>
